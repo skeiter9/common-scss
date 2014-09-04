@@ -25,3 +25,8 @@ svg:not(:root) { overflow: hidden; }
 @media print {
 	p, h2, h3 { orphans: 3; widows: 3; }
 }
+
+/***/
+* {
+	@include box-sizing( border-box );
+}
