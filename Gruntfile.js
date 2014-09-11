@@ -1,44 +1,31 @@
 module.exports = function(grunt){
 	// config
 	grunt.initConfig({
-		watch:{ 
-			scripts:{
-        files:['*.scss'],
-        options: {
-         	livereload: 1337
-        }
-      },
+		watch:{
 			sass:{
-				files:['*.scss', 'components/*.scss'],
-				tasks:['sass']
+				files:['dev/*.scss','dev/**/*.scss'],
+				tasks:['sass'],
+				options: {
+					livereload: 9000
+				}
 			}
 		},
-		connect: {
-		  server: {
-		    options: {
-		    	port: 9002,
-		    	base:'./dev',
-		     	livereload: 1337
-		    }
-		  }
-		},
 	  sass: {
-	      dist: {
-	        files: {
-	          'css/common.css':'common.scss'
-	        }
-	      },
-        options:{
+	    dist: {
+	      options:{
           lineNumbers: true
-        }
+        },
+	       files: {
+	        'dist/common.css':'dev/common.scss'
+	      }
+	    }
 	  }
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 
-  grunt.registerTask('default',['connect','watch'] );
+  grunt.registerTask('default',['watch'] );
 	grunt.registerTask('compile-sass',[ 'sass'] );
 
 };

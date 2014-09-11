@@ -1,3 +1,7 @@
+* {
+	@include box-sizing( border-box );
+}
+
 html {
 	font-size: 100%;
 	overflow-y: scroll;
@@ -6,12 +10,14 @@ html {
 }
 
 ::-moz-selection { 
-	background-color: #fe57a1; 
-	color: #fff; text-shadow: none; 
+	background-color: $color-primary; 
+	color: $color-white; 
+	text-shadow: none; 
 }
 ::selection      { 
-	background-color: #fe57a1; 
-	color: #fff; text-shadow: none; 
+	background-color: $color-primary; 
+	color: $color-white; 
+	text-shadow: none; 
 }
 
 img { 
@@ -24,7 +30,8 @@ img {
 	clip: rect(0 0 0 0);
 	height: 1px; margin: -1px;
 	overflow: hidden; padding: 0;
-	position: absolute; width: 1px;
+	position: absolute; 
+	width: 1px;
 }
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
@@ -37,17 +44,10 @@ img {
 	position: static;
 	width: auto; }
 
-svg:not(:root) { overflow: hidden; }
-
 @media print {
 	img { max-width: 100% !important; }
 }
 
 @media print {
 	p, h2, h3 { orphans: 3; widows: 3; }
-}
-
-/***/
-* {
-	@include box-sizing( border-box );
 }
