@@ -1,6 +1,8 @@
 @import "bourbon/bourbon";
-@import "components/placeholders-scss/placeholders";
-@import "components/normalize";
+
+@import "placeholders-scss/placeholders";
+@import "normalize.css/normalize";
+
 @import "components/reset";
 @import "components/base";
 @import "components/text";
