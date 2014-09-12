@@ -1,4 +1,6 @@
 body,
+figure,
+main,
 h1,
 h2,
 h3,
@@ -10,4 +12,8 @@ h6 {
 
 a {
 	text-decoration: none;
+} 
+
+* { 
+	@include box-sizing(border-box);
 }
