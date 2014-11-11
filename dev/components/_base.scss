@@ -1,9 +1,7 @@
-* {
-	@include box-sizing( border-box );
-}
+$base-font : 16px !default; 
 
 html {
-	font-size: 16px;
+	font-size: $base-font;
 	line-height: 1.5;
 	overflow-y: scroll;
 	-webkit-text-size-adjust: 100%;
